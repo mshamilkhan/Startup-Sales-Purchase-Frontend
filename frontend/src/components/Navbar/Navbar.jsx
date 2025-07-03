@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styles from "./Navbar.module.css";
-import { useLanguage } from "../../context/LanguageContext";
-import { en, ar } from "../../translations";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-  const { isArabic, toggleLanguage } = useLanguage();
-  const t = isArabic ? ar : en;
 
+  // Change navbar style on scroll
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100);
@@ -20,18 +17,14 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu when route changes
+  // Close mobile menu on route change
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location]);
 
-  // Prevent body scroll when mobile menu is open
+  // Prevent body scroll when menu is open
   useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
+    document.body.style.overflow = isMenuOpen ? "hidden" : "unset";
     return () => {
       document.body.style.overflow = "unset";
     };
@@ -45,23 +38,20 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
-  // Toggle button
-
   const navLinks = [
-    { path: "/", label: t.nav.home },
-    { path: "/about", label: t.nav.about },
-    { path: "/services", label: t.nav.services },
-    { path: "/contact", label: t.nav.contact },
+    { path: "/", label: "Home" },
+    { path: "/sellers", label: "Sellers" },
+    { path: "/buyers", label: "buyers" },
+    { path: "/collaboration", label: "Collaboration" },
+    { path: "/login", label: "Login" },
+    { path: "/signup", label: "Signup" },
+    
   ];
 
   return (
     <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""}`}>
       <Link to="/" className={styles.logoContainer}>
-        <img
-          src="/assets/logo.png"
-          alt="Logo"
-          className={styles.logo}
-        />
+        <img src="./logo.svg" alt="Logo" className={styles.logo} />
       </Link>
 
       <div className={styles.navLinks}>
@@ -76,20 +66,6 @@ const Navbar = () => {
             {link.label}
           </Link>
         ))}
-      </div>
-
-      <div className={styles.language_selector}>
-        <p className={styles.language_text}>
-          {isArabic ? "العربية" : "ENGLISH"}
-        </p>
-        <div
-          className={`${styles.toggle_container} ${
-            isArabic ? styles.active : ""
-          }`}
-          onClick={toggleLanguage}
-        >
-          <div className={styles.toggle_circle} />
-        </div>
       </div>
 
       <button
@@ -109,11 +85,7 @@ const Navbar = () => {
       >
         <div className={styles.mobileMenuHeader}>
           <Link to="/" onClick={closeMenu}>
-            <img
-              src="/assets/logo.png"
-              alt="Logo"
-              className={styles.logo}
-            />
+            <img src="./logo.svg" alt="Logo" className={styles.logo} />
           </Link>
           <button className={styles.closeButton} onClick={closeMenu}>
             <span></span>
@@ -132,15 +104,9 @@ const Navbar = () => {
             {link.label}
           </Link>
         ))}
-        {/* {location.pathname === "/services" && (
-          <div className={styles.mobileToggleButton}>
-            <p>ARABIC</p>
-            <img src="/assets/toggle.png" alt="Toggle" />
-          </div>
-        )} */}
       </div>
     </nav>
   );
 };
 
-export default Navbar;
+export { Navbar };
