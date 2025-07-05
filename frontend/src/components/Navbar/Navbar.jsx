@@ -41,7 +41,7 @@ const Navbar = () => {
   const navLinks = [
     { path: "/", label: "Home" },
     { path: "/sellers", label: "Sellers" },
-    { path: "/buyers", label: "buyers" },
+    { path: "/marketplace", label: "buyers" },
     { path: "/collaboration", label: "Collaboration" },
     { path: "/login", label: "Login" },
     { path: "/signup", label: "Signup" },
