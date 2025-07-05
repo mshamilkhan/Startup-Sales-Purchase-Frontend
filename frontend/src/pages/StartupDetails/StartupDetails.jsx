@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./StartupDetails.module.css";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { Footer } from "../../components/Footer/Footer";
-
+import { Link } from "react-router-dom";
 const StartupDetails = () => {
   return (
     <>
@@ -70,9 +70,11 @@ const StartupDetails = () => {
       {/* Positions */}
       <h3 className={styles.sectionTitle}>Apply For Positions</h3>
       <div className={styles.positions}>
+<Link to="/apply-for-collaboration" className={styles.btn2}>
         <button className={styles.btn}>Graphic Designer</button>
         <button className={`${styles.btn}`}>Senior Developer</button>
         <button className={styles.btn}>Android Developer</button>
+</Link>
       </div>
     </div>
 

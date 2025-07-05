@@ -33,7 +33,7 @@ function LandingPage() {
               <Link to="/marketplace">
                 <button>Marketplace</button>
               </Link>
-              <Link to="/uploadstartup">
+              <Link to="/createstartup">
                 <button>Upload Startup</button>
               </Link>
             </div>
