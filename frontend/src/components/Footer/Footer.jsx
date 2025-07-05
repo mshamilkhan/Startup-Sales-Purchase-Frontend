@@ -1,17 +1,11 @@
 import React from "react";
 import styles from "./Footer.module.css";
-import { useLanguage } from "../../context/LanguageContext";
-import { en, ar } from "../../translations";
 
 const Footer = () => {
-  const { isArabic } = useLanguage();
-  const t = isArabic ? ar : en;
-
   return (
     <footer className={styles.footer}>
       <div className={styles.footer_content}>
         <div className={styles.footer_section}>
-          {/* <h3>Contact Us</h3> */}
           <div className={styles.social_icons}>
             <a
               href="https://facebook.com"
@@ -21,8 +15,8 @@ const Footer = () => {
             >
               <img
                 className={styles.icons}
-                src="/assets/facebook_icon.png"
-                alt=""
+                src="/facebook_icon.png"
+                alt="Facebook"
               />
             </a>
             <a
@@ -33,8 +27,8 @@ const Footer = () => {
             >
               <img
                 className={styles.icons}
-                src="/assets/Instagram.png"
-                alt=""
+                src="/Instagram.png"
+                alt="Instagram"
               />
             </a>
           </div>
@@ -42,46 +36,46 @@ const Footer = () => {
 
         <div className={styles.links_container}>
           <div className={styles.link_group}>
-            <h3>{t.footer.company}</h3>
+            <h3>Company</h3>
             <ul>
               <li>
-                <a href="/about">{t.footer.aboutUs}</a>
+                <a href="/about">About Us</a>
               </li>
               <li>
-                <a href="/services">{t.footer.services}</a>
+                <a href="/services">Services</a>
               </li>
               <li>
-                <a href="/contact">{t.footer.contact}</a>
+                <a href="/contact">Contact</a>
               </li>
             </ul>
           </div>
 
           <div className={styles.link_group}>
-            <h3>{t.footer.services}</h3>
+            <h3>Services</h3>
             <ul>
               <li>
-                <a href="/services">{t.footer.solarSolutions}</a>
+                <a href="/services">Solar Solutions</a>
               </li>
               <li>
-                <a href="/services">{t.footer.energyManagement}</a>
+                <a href="/services">Energy Management</a>
               </li>
               <li>
-                <a href="/services">{t.footer.consulting}</a>
+                <a href="/services">Consulting</a>
               </li>
             </ul>
           </div>
 
           <div className={styles.link_group}>
-            <h3>{t.footer.resources}</h3>
+            <h3>Resources</h3>
             <ul>
               <li>
-                <a href="/about">{t.footer.ourProjects}</a>
+                <a href="/about">Our Projects</a>
               </li>
               <li>
-                <a href="/contact">{t.footer.support}</a>
+                <a href="/contact">Support</a>
               </li>
               <li>
-                <a href="/contact">{t.footer.faq}</a>
+                <a href="/contact">FAQ</a>
               </li>
             </ul>
           </div>
@@ -89,10 +83,10 @@ const Footer = () => {
       </div>
 
       <div className={styles.footer_bottom}>
-        <p>{t.footer.copyright}</p>
+        <p>&copy; 2025 SolarNest. All rights reserved.</p>
       </div>
     </footer>
   );
 };
 
-export default Footer;
+export { Footer };
