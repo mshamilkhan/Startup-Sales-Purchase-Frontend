@@ -36,7 +36,7 @@ This platform features:
 ## 📦 Installation & Setup
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/mshamilkhan/Startup-Sales-Purchase-Frontend.git
+cd Startup-Sales-Purchase-Frontend
 npm install
 npm run dev
