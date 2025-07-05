@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "./MarketPlaceCard.module.css";
-
+import { Link } from "react-router-dom";
 const MarketPlaceCard = ({ name, description, revenue, profit, askingPrice, tag }) => {
   return (
+    <Link to="/startupdetail" className={styles.linkWrapper}>
     <div className={styles.card}>
 
       <div className={styles.cardHeader}>
@@ -29,6 +30,7 @@ const MarketPlaceCard = ({ name, description, revenue, profit, askingPrice, tag 
         </div>
       </div>
     </div>
+    </Link>
   );
 };
 

@@ -45,21 +45,21 @@ const StartupDetails = () => {
         <div className={styles.metric}>
           <span className={styles.metricLabel}>TTM PROFIT</span>
           <div className={styles.metricLabel2}>
-            <img src="./Get Revenue.svg" alt="" />
+            <img src="./Stocks Growth.svg" alt="" />
           <p className={styles.metricValue}> $100k</p>
           </div>
         </div>
         <div className={styles.metric}>
           <span className={styles.metricLabel}>LAST MONTH REVENUE</span>
          <div className={styles.metricLabel2}>
-            <img src="./Get Revenue.svg" alt="" />
+            <img src="./Profit.svg" alt="" />
           <p className={styles.metricValue}> $100k</p>
           </div>
         </div>
         <div className={styles.metric}>
           <span className={styles.metricLabel}>LAST MONTH PROFIT</span>
         <div className={styles.metricLabel2}>
-            <img src="./Get Revenue.svg" alt="" />
+            <img src="./Weak Financial Growth.svg" alt="" />
           <p className={styles.metricValue}> $100k</p>
           </div>
         </div>
