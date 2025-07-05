@@ -4,6 +4,7 @@ import { Signup } from './components/Signup/Signup';
 import { LandingPage } from './pages/LandingPage/LandingPage';
 import {Marketplace} from './pages/Marketplace/Marketplace';
 import { Collaboration } from './pages/Collaboration/Collaboration';
+import StartupDetails from './pages/StartupDetails/StartupDetails';
 // import other pages...
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Route path="/signup" element={<Signup/>} />
       <Route path="/marketplace" element={<Marketplace/>} />
       <Route path="/collaboration" element={<Collaboration/>} />
+      <Route path="/startupdetail" element={<StartupDetails/>} />
     
     </Routes>
   );
