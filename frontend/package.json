@@ -3,14 +3,17 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://mshamilkhan.github.io/Startup-Sales-Purchase-Frontend",
   "scripts": {
     "dev": "vite",
+    "deploy":"gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "axios": "^1.10.0",
+    "gh-pages": "^6.3.0",
     "js-cookie": "^3.0.5",
     "react": "^19.1.0",
     "react-cookie": "^8.0.1",
