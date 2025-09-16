@@ -17,15 +17,15 @@ const CollaborationCard = ({ name, description, earnthrough, phase, team, tag })
         <p className={styles.description}>{description}</p>
         <div className={styles.stats}>
           <div className={styles.statsheading}>
-            Earn Through
+            Created at
             <p>{earnthrough}</p>
           </div>
           <div className={styles.statsheading}>
-            Phase
+            Category
             <p>{phase}</p>
           </div>
           <div className={styles.statsheading}>
-            Team Members
+            Phase
             <p>{team}</p>
           </div>
         </div>

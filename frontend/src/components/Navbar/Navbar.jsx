@@ -41,10 +41,12 @@ const Navbar = () => {
   const navLinks = [
     { path: "/", label: "Home" },
     { path: "/createstartup", label: "Sellers" },
-    { path: "/marketplace", label: "buyers" },
+    // { path: "/marketplace", label: "Market place" },
     { path: "/collaboration", label: "Collaboration" },
+    { path: "/account", label: "Account" },
+    { path: "/message", label: "Team" },
     { path: "/login", label: "Login" },
-    { path: "/signup", label: "Signup" },
+    // { path: "/signup", label: "Signup" },
     
   ];
 

@@ -20,7 +20,9 @@ function LeftImageRightText() {
         </div>
 
         <div className={styles.right}>
-          <img src="./sapiencycle.png" alt="" />
+          {/* <img src="./sapiencycle.png" alt="" /> */}
+         <video src="/bs.mp4" autoPlay muted loop playsInline />
+
         </div>
       </div>
     </>
